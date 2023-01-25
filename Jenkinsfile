@@ -49,6 +49,7 @@ pipeline {
                 bat 'gradlew publish'
 
             }
+           
         }
   }
 
