@@ -22,7 +22,7 @@ pipeline {
        stage ('Code Analysis') { // la phase build
             steps {
                            withSonarQubeEnv('jenkins'){
-                bat 'gradle sonarqube'
+                bat 'gradlew sonarqube'
                             }
             }
          }
@@ -37,8 +37,8 @@ pipeline {
       
                  stage("Build") {
             steps {
-                bat 'gradle build'
-                bat 'gradle javadoc'
+                bat 'gradlew build'
+                bat 'gradlew javadoc'
                 archiveArtifacts 'build/libs/*.jar'
                 archiveArtifacts 'build/docs/'
             }
@@ -46,7 +46,7 @@ pipeline {
 
          stage("deploy") {
             steps {
-                bat 'gradle publish'
+                bat 'gradlew publish'
 
             }
         }
