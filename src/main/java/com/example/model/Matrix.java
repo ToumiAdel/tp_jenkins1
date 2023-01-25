@@ -95,13 +95,15 @@ public class Matrix {
 			}
 		}
 
-		@Override
-	public int hashCode(){
-		return nrows*ncols;
-	}
+		
 
 	return  true;
 
+	}
+	
+	@Override
+	public int hashCode(){
+		return nrows*ncols;
 	}
 
 }
