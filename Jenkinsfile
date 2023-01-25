@@ -55,6 +55,7 @@ pipeline {
       stage("Notification") {
       steps {
           notifyEvents message: 'Good morning <b>Adel</b>', token: 'ygz6d0l8M7LrxEDlZlGBF8oPKpgJpcN1'
+        mail bcc: '', body: '''good morning Adel !!''', cc: '', from: '', replyTo: '', subject: 'mail', to: 'ja_toumi@esi.dz'
       }
     }
     
