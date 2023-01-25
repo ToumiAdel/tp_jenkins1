@@ -47,7 +47,7 @@ pipeline {
 
          stage("deploy") {
             steps {
-                bat 'gradle publish'
+                bat 'gradleW publish'
 
             }
            
