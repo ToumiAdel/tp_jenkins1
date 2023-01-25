@@ -52,8 +52,19 @@ pipeline {
             }
            
         }
+      stage("Notification") {
+      steps {
+          notifyEvents message: 'Good morning <b>Adel</b>', token: 'ygz6d0l8M7LrxEDlZlGBF8oPKpgJpcN1'
+      }
+    }
     
   }
-
+   post {
+        failure {
+            mail bcc: '', body: '''Error !!''', cc: '', from: '', replyTo: '', subject: 'Pipleline failiure', to: 'ja_toumi@esi.dz'
+        }
+  }
+  
 
 }
+
